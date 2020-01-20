@@ -12,3 +12,4 @@
 <p>Do a database migration using following command</p>
 <pre>php artisan migrate</pre>
 <h2>Run server</h2>
+<p>Import servme test.postman_collection.json into postman</p>
