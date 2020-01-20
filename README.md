@@ -12,5 +12,5 @@
 <p>Do a database migration using following command</p>
 <pre>php artisan migrate</pre>
 <h2>Run server</h2>
-<p>test.postman_collection.json file contains all api requests</p>
+<p>servme test.postman_collection.json file contains all api requests</p>
 <p>Import "test.postman_collection.json" file into postman</p>
