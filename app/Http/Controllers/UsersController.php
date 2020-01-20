@@ -24,8 +24,8 @@ class UsersController extends Controller{
       return response()->json(['status' => 'fail', 'message' => 'No user exists'],401);
     }else{
       if(md5($request->input('password')) == $user->password){
-           // $apikey = base64_encode(str_random(40));
-           $api_token = 'key123';
+           $api_token = base64_encode(random_bytes(10));
+           // $api_token = 'key123';
            Users::where('email', $request->input('email'))->update(['api_token' => "$api_token"]);
            return response()->json(['status' => 'success','api_key' => $api_token]);
        }else{
@@ -49,10 +49,11 @@ class UsersController extends Controller{
 
    public function register(Request $request){
      $this->validate($request, [
-                                     'email' => 'required',
+                                     'email' => 'required|unique:users,email',
                                      'password' => 'required'
                                 ]);
-      $api_token = 'key123';
+      $api_token = base64_encode(random_bytes(10));
+      // $api_token = 'key123';
       $id = Users::insert([
         'f_name'=>$request->input('f_name'),
         'l_name'=>$request->input('l_name'),
