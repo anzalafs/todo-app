@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "78c5bc30-5a97-4eba-b26f-d74897d33ae2",
+		"name": "servme test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"f_name\":\"john\",\n\t\"l_name\":\"doe\",\n\t\"email\":\"john@tester.com\",\n\t\"password\":\"password\",\n\t\"mobile\":1234567890,\n\t\"gender\":\"male\",\n\t\"b_day\":\"2020-01-19\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/servme_test/technical/public/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"servme_test",
+						"technical",
+						"public",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"john@tester.com\",\n\t\"password\":\"password\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/servme_test/technical/public/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"servme_test",
+						"technical",
+						"public",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Todo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "key123",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost/servme_test/technical/public/api/todo?category=22&status=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"servme_test",
+						"technical",
+						"public",
+						"api",
+						"todo"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "22"
+						},
+						{
+							"key": "status",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Todo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "key123",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\":1,\n\t\"name\":\"First todo\",\n\t\"description\":\"Description\",\n\t\"time\":\"2020-01-20 00:52:32\",\n\t\"status\":\"default\",\n\t\"cat_id\":1\n}"
+				},
+				"url": {
+					"raw": "http://localhost/servme_test/technical/public/api/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"servme_test",
+						"technical",
+						"public",
+						"api",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Todo Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "key123",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\":1,\n\t\"name\":\"First todo\",\n\t\"description\":\"Description\",\n\t\"time\":\"2020-01-20 00:52:32\",\n\t\"status\":\"default\",\n\t\"cat_id\":1\n}"
+				},
+				"url": {
+					"raw": "http://localhost/servme_test/technical/public/api/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"servme_test",
+						"technical",
+						"public",
+						"api",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "key123",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Second category\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/servme_test/technical/public/api/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"servme_test",
+						"technical",
+						"public",
+						"api",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/servme_test/technical/public/api/logout?email=email@email.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"servme_test",
+						"technical",
+						"public",
+						"api",
+						"logout"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "email@email.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todo",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "key123",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/servme_test/technical/public/api/destroy/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"servme_test",
+						"technical",
+						"public",
+						"api",
+						"destroy",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

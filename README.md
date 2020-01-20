@@ -1,7 +1,7 @@
 <h2>Installation</h2>
 <p>Clone Repository</p>
 <pre>git clone https://github.com/anzalafs/todo-app.git</pre>
-<p>Create a database named "table"</p>
+<p>Create a database named "servme_test"</p>
 <p>Then cd into the folder with this command-</p>
 <pre><code>cd todo-app
 </code></pre>
